@@ -1,2 +1,2 @@
-# Hammer-King
-My first platform game 2D using free graphics assets
+# HammerKingAndPigs
+Simple platform 2d to practice gamedev skills
