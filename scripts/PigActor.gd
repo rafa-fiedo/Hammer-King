@@ -5,6 +5,7 @@ export(bool) var flip_on_start = false
 export(bool) var disable_move = false
 export(bool) var run_right = false
 export(bool) var body_free = false
+export(bool) var disable_collision = false
 export(PackedScene) var coin_scene = null
 
 export(int) var basic_speed = -185
@@ -22,6 +23,9 @@ func _ready():
 		velocity = Vector2(-velocity.x, velocity.y)
 	if disable_move:
 		state = STOP
+	if disable_collision:
+		$PlayerDetector.monitorable = false
+		$PlayerDetector.monitoring = false
 
 func _on_StompDetector_body_entered(body):
 	# I don't using this global position y because move_slide is changing y depending on speed process.

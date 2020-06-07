@@ -78,7 +78,6 @@ monster_start = 0.85
 enemy_spawn = ExtResource( 11 )
 
 [node name="StopPigsDoor_1" type="Area2D" parent="."]
-editor/display_folded = true
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StopPigsDoor_1"]
@@ -86,7 +85,6 @@ position = Vector2( 876, 200 )
 shape = SubResource( 1 )
 
 [node name="EnemiesJump" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="EnemyJump" parent="EnemiesJump" instance=ExtResource( 12 )]
 position = Vector2( 387, 191 )
@@ -107,7 +105,6 @@ position = Vector2( 735, 188 )
 position = Vector2( 802, 189 )
 
 [node name="Spikes8" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Spikes3" parent="Spikes8" instance=ExtResource( 10 )]
 position = Vector2( 624, 256 )
@@ -125,7 +122,6 @@ position = Vector2( 816, 288 )
 position = Vector2( 848, 288 )
 
 [node name="pigs_attack" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="pigs" type="Node" parent="pigs_attack"]
 
@@ -170,7 +166,6 @@ position = Vector2( 17.9999, -2 )
 shape = SubResource( 2 )
 
 [node name="pigs_attack2" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Decoration2" parent="pigs_attack2" instance=ExtResource( 3 )]
 position = Vector2( 1010, 94 )
@@ -182,36 +177,43 @@ visible = false
 [node name="Pig" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1447, 158 )
 disable_move = true
+disable_collision = true
 basic_speed = -200
 
 [node name="Pig2" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1437, 165 )
 disable_move = true
+disable_collision = true
 basic_speed = -190
 
 [node name="Pig6" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1420, 130 )
 disable_move = true
+disable_collision = true
 basic_speed = -180
 
 [node name="Pig7" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1380, 80 )
 disable_move = true
+disable_collision = true
 basic_speed = -190
 
 [node name="Pig4" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1360, 110 )
 disable_move = true
+disable_collision = true
 basic_speed = -200
 
 [node name="Pig5" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1390, 130 )
 disable_move = true
+disable_collision = true
 basic_speed = -150
 
 [node name="Pig3" parent="pigs_attack2/pigs" instance=ExtResource( 11 )]
 position = Vector2( 1441, 151 )
 disable_move = true
+disable_collision = true
 basic_speed = -200
 [connection signal="body_entered" from="Coin" to="." method="_on_Coin_body_entered"]
 [connection signal="timeout" from="MusicStart" to="." method="_on_MusicStart_timeout"]

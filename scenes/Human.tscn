@@ -254,6 +254,8 @@ stream = ExtResource( 7 )
 volume_db = -5.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 drag_margin_top = 1.0
 drag_margin_bottom = 1.0
 [connection signal="animation_finished" from="ani" to="." method="_on_ani_animation_finished"]
